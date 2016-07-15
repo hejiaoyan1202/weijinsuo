@@ -1,0 +1,250 @@
+/*
+* @Author: zhengwei
+* @Date:   2016-06-30 10:15:46
+* @Last Modified by:   zhengwei
+* @Last Modified time: 2016-06-30 11:49:44
+*/
+body {
+  /* 字体中间有空格的话就要带引号 */
+  font-family: "Microsoft YaHei";
+}
+/* 定义一个字体 */
+@font-face {
+  /* 要定义的字体的名字 */
+  font-family: 'itcast';
+  /* 跟着字体文件对应的路径还有字体的声明 */
+  src: url(../fonts/MiFie-Web-Font.eot) format("embedded-opentype"), url(../fonts/MiFie-Web-Font.ttf) format("truetype"), url(../fonts/MiFie-Web-Font.svg) format("svg"), url(../fonts/MiFie-Web-Font.woff) format("woff");
+}
+/**
+ * 1.尽可能的多使用直接子代选择器 避免误杀到别的元素 提升CSS查找性能
+ * 2.尽可能多使用ID去限定选择器 选择器更精确 优先级更高
+ */
+[class^="icon-"] {
+  font-family: 'itcast';
+  font-style: normal;
+}
+.icon-mobilephone::before {
+  content: "\e908";
+  font-size: 13px;
+}
+.icon-telephone::before {
+  content: "\e909";
+  font-size: 13px;
+}
+.icon-icon::before {
+  content: "\e920";
+  font-size: 50px;
+  color: #e92322;
+  line-height: 50px;
+  vertical-align: middle;
+}
+.icon-logo::before {
+  content: "\e93e";
+  font-size: 32px;
+  color: #333;
+  line-height: 50px;
+  vertical-align: middle;
+}
+#header > .topbar {
+  font-size: 10px;
+  line-height: 40px;
+  border-bottom: 1px solid #c0c0c0;
+}
+#header > .topbar > div {
+  height: 40px;
+}
+#header > .topbar > div > a {
+  color: #666;
+}
+#header > .topbar > div .mobile-link img {
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  top: 27px;
+  z-index: 1001;
+}
+#header > .topbar > div .mobile-link:hover img {
+  display: block !important;
+}
+#header > .topbar > div + div {
+  border-left: 1px solid #c0c0c0;
+}
+/* 头部区域 */
+/* #header > .topbar {
+    font-size: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#header > .topbar > .container > div {
+    height: 40px;
+}
+
+#header > .topbar > .container > div + div {
+    border-left: 1px solid #c0c0c0;
+}
+
+#header > .topbar > .container > div > a {
+    color: #666;
+}
+
+#header > .topbar > .container > div > .mobile-link img {
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 27px;
+    z-index: 1001;
+}
+
+#header > .topbar > .container > div > .mobile-link:hover img {
+    display: block !important;
+}
+
+#header > .topbar > .container > div:nth-child(2n) {}
+ */
+/* Bootstrap扩展样式 */
+/* 自定义按钮 */
+.btn-register {
+  color: #FFFFFF;
+  background-color: #E92322;
+  border-color: #E92322;
+}
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  color: #FFFFFF;
+  background-color: #e92322;
+  border-color: #E92322;
+}
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  background-image: none;
+}
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+  background-color: #E92322;
+  border-color: #E92322;
+}
+.btn-register .badge {
+  color: #E92322;
+  background-color: #FFFFFF;
+}
+/*自定义 导航条 */
+.navbar-itcast {
+  /* background-color: #f8f8f8; */
+  border-color: #e7e7e7;
+  border-top: 0;
+}
+.navbar-itcast .navbar-brand {
+  color: #777;
+  height: 80px;
+}
+.navbar-itcast .navbar-brand:hover,
+.navbar-itcast .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-itcast .navbar-text {
+  color: #777;
+}
+.navbar-itcast .navbar-nav > li > a {
+  color: #777;
+  line-height: 50px;
+}
+.navbar-itcast .navbar-nav > li > a:hover,
+.navbar-itcast .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+  border-bottom: 2px solid #e92322;
+}
+.navbar-itcast .navbar-nav > .active > a,
+.navbar-itcast .navbar-nav > .active > a:hover,
+.navbar-itcast .navbar-nav > .active > a:focus {
+  color: #555;
+  /* background-color: #e7e7e7; */
+  /* line-height: 50px; */
+  border-bottom: 2px solid #e92322;
+}
+.navbar-itcast .navbar-nav > .disabled > a,
+.navbar-itcast .navbar-nav > .disabled > a:hover,
+.navbar-itcast .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-itcast .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-itcast .navbar-toggle:hover,
+.navbar-itcast .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-itcast .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-itcast .navbar-collapse,
+.navbar-itcast .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-itcast .navbar-nav > .open > a,
+.navbar-itcast .navbar-nav > .open > a:hover,
+.navbar-itcast .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-itcast .navbar-link {
+  color: #777;
+}
+.navbar-itcast .navbar-link:hover {
+  color: #333;
+}
+.navbar-itcast .btn-link {
+  color: #777;
+}
+.navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link:focus {
+  color: #333;
+}
+.navbar-itcast .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-itcast .btn-link:focus {
+  color: #ccc;
+}
